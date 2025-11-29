@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{times}
+\textwidth 130mm
+\textheight 188mm
+\footskip 8mm
+\parindent 0in
+\newcommand{\writetitle}[2]{
+\addcontentsline{toc}{part}{\normalsize{{\it #2}\\#1}\vspace{-17pt}}\vskip 2em
+\begin{center}{\Large {\bf #1} \par}\vskip 1em{\large\lineskip .5em{\bf #2}\par}
+\end{center}\vskip .5em}
+	
+\begin{document}
+
+\writetitle{Linear Congruent Generator Imitation in Slot Machine Gambling Games}
+{Vladislav Saykov, Ioan Dimitrov, Radoslav Batalski, Denis Tsvetanov, Georgi Doldurov, Lora Doldurova, Todor Balabanov}
+
+% Institute of Information and Communication Technologies
+% Bulgarian Academy of Sciences
+% acad. Georgi Bonchev Str., block 2, office 514, 1113 Sofia, Bulgaria
+% http://www.iict.bas.bg/
+% iict@bas.bg
+
+\underline{Introduction} \hspace*{4mm} Slot machines are among the most popular gambling games. The concept behind them involves virtual strips of winning symbols. They are often referred to as fruit machines because, when first invented, they were mechanical devices that offered fruit bars as prizes for hitting specific combinations of drawn fruits on spinning reels.
+\\
+
+Modern slot machines are computerized devices or part of an online entertainment system. Instead of mechanical reels, they utilize virtual reels, which are often represented as two-dimensional arrays of numbers that identify the symbols. The traditional spinning mechanism has been replaced by a process that randomly selects the reels' stopping positions. This random selection relies on random number generators.
+\\
+
+In most developed markets, the law mandates the use of cryptographically secure random number generators. These types of generators produce high-quality random numbers, although their generation speed may be slower. Additionally, legal requirements state that each randomly generated number must be stored in an event log for potential legal inspection.
+\\
+
+\underline{Linear Congruential Generator} \hspace*{4mm} LCG is one of the most popular pseudo-random number generators. Its greatest advantage is its simplicity, and its greatest disadvantage is its simplicity. The advantage is the simple linear formula used to generate the following number. The formula uses only three operations: multiplication, addition, and modulus. The most significant disadvantage of LCG is that the generated numbers do not meet moderate statistical quality requirements.
+\\
+
+\underline{Imitating LCG in the Gambling} \hspace*{4mm} Logging a large volume of random numbers on heavily loaded gambling servers can be resource-intensive. This overload, combined with the limited capacity of high-quality, cryptographically secure random number generators, drives the need for more efficient methods to calculate gambling outcomes. In this context, the idea of imitating an LCG becomes relevant.
+\\
+
+In this approach, the seed value is generated using a cryptographically secure random number generator, and only this seed is logged in the server's storage. All subsequent values are then calculated from that seed through LCG-like mathematical transformations. This method complies with legal requirements to use only one RNG instance. Additionally, from the programmer's perspective, the numbers generated in this way appear to originate from an RNG.
+\\
+
+\vspace*{2mm}
+\underline{Acknowledgments} \hspace*{4mm}
+This research is supported by Velbazhd Software LLC.
+
+\end{document}
